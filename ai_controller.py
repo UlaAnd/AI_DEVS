@@ -19,9 +19,9 @@ class OpenAiController:
         print(output)
         return output
 
-    def get_completion(self, prompt: str) -> str:
+    def get_completion(self, prompt: str, system="You are a helpful assistant, your answer are no longer then 5 sentenses") -> str:
         messages = [
-            {"role": "system", "content": "You are a helpful assistant, your answer are no longer then 5 sentenses"},
+            {"role": "system", "content": system},
             {"role": "user", "content": prompt},
         ]
         completion = openai.ChatCompletion.create(
