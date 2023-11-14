@@ -14,7 +14,6 @@ class Task:
         task_answer = self.get_answer(question=question, info_list=info_list)
         controller_api.post_answer(task_answer=task_answer, token=token)
 
-
     def get_answer(self, question: str, info_list: list):
         words = question.split()
         for word in words:

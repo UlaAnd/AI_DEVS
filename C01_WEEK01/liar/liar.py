@@ -1,4 +1,4 @@
-
+import json
 import requests
 
 import prod
@@ -53,6 +53,7 @@ def post_answer():
         return data
     except requests.exceptions.RequestException as e:
         print("Błąd:", e)
+
 
 if __name__ == '__main__':
     post_answer()
