@@ -1,7 +1,6 @@
 import openai
 from prod import ula_key
 from openai import OpenAI
-from docx import Document
 
 openai.api_key = ula_key  # type: ignore # noqa
 
@@ -29,11 +28,10 @@ class OpenAiController:
             {"role": "system", "content": system},
             {"role": "user", "content": prompt},
         ]
-        completion = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo", messages=messages, max_tokens=100, temperature=0.5
+        completion = client.chat.completions.create(
+            model="gpt-3.5-turbo", messages=messages
         )
-
-        return completion.choices[0].message["content"]
+        return completion.choices[0].message.content
 
     def get_embedding(self, text: str) -> str:
         response = client.embeddings.create(
