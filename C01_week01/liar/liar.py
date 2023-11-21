@@ -1,8 +1,7 @@
-import json
 import requests
 
 import prod
-from ai_controller import OpenAiController
+from controllers.ai_controller import OpenAiController
 
 
 def get_auth(task_name="liar", key=prod.api_key_devs):

@@ -1,11 +1,9 @@
 import requests
 
-from ai_controller import OpenAiController
-from controller_api import ControllerApi
+from controllers.ai_controller import OpenAiController
+from controllers.controller_api import ControllerApi
 from prod import ula_key
-from qdrant_helper import create_collection
 import json
-import os
 import uuid
 from qdrant_client import QdrantClient
 from qdrant_client.http.models import Filter, FieldCondition, MatchValue, Distance, VectorParams, PointStruct

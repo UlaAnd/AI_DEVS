@@ -2,7 +2,7 @@
 import requests
 
 import prod
-from ai_controller import OpenAiController
+from controllers.ai_controller import OpenAiController
 
 
 

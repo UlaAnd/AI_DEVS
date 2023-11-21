@@ -1,7 +1,5 @@
-import requests
-
-from ai_controller import OpenAiController
-from controller_api import ControllerApi
+from controllers.ai_controller import OpenAiController
+from controllers.controller_api import ControllerApi
 
 
 class Task:
@@ -16,7 +14,7 @@ class Task:
         controller = OpenAiController()
         # response = requests.get(url="https://zadania.aidevs.pl/data/mateusz.mp3")
         # response.raise_for_status()
-        audio_file_path = "/home/ula/PycharmProjects/AI_DEVS/mateusz.mp3"
+        audio_file_path = "/C02_week02/mateusz.mp3"
         result = controller.get_whisper(audio_file_path=audio_file_path)
         return result
 

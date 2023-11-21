@@ -1,7 +1,5 @@
-import requests
-
-from ai_controller import OpenAiController
-from controller_api import ControllerApi
+from controllers.ai_controller import OpenAiController
+from controllers.controller_api import ControllerApi
 
 
 class Task:
