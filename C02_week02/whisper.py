@@ -3,7 +3,7 @@ from controllers.controller_api import ControllerApi
 
 
 class Task:
-    def whisper(self):
+    def main_method(self):
         controller_api = ControllerApi()
         token = controller_api.get_auth(task_name="whisper")
         data = controller_api.get_task(token=token)
@@ -21,6 +21,6 @@ class Task:
 
 if __name__ == '__main__':
     task = Task()
-    task.whisper()
+    task.main_method()
 
 

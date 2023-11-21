@@ -4,7 +4,7 @@ from controllers.controller_api import ControllerApi
 
 
 class Task:
-    def inprompt(self):
+    def main_method(self):
         controller_api = ControllerApi()
         token = controller_api.get_auth(task_name="inprompt")
         data = controller_api.get_task(token=token)
@@ -32,4 +32,4 @@ class Task:
 
 if __name__ == '__main__':
     task = Task()
-    task.inprompt()
+    task.main_method()

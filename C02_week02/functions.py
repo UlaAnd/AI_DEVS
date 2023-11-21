@@ -4,7 +4,7 @@ from controllers.controller_api import ControllerApi
 
 class Task:
     
-    def function(self):
+    def main_method(self):
         controller_api = ControllerApi()
         token = controller_api.get_auth(task_name="functions")
         data = controller_api.get_task(token=token)
@@ -35,6 +35,6 @@ class Task:
 
 if __name__ == '__main__':
     task = Task()
-    task.function()
+    task.main_method()
 
 
