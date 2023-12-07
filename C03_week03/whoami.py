@@ -1,4 +1,4 @@
-from controllers.ai_controller import OpenAiController
+from controllers.controller_ai import OpenAiController
 from controllers.controller_api import ControllerApi
 
 

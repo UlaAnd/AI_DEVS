@@ -1,10 +1,7 @@
-
 import requests
 
 import prod
-from controllers.ai_controller import OpenAiController
-
-
+from controllers.controller_ai import OpenAiController
 
 
 def get_auth(task_name="blogger", key=prod.api_key_devs):
